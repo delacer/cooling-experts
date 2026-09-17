@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# ❄️ Cooling Experts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Professional Air Conditioning & HVAC Solutions in Cape Town
 
-## Available Scripts
+Cooling Experts is a modern, responsive business website built for a professional air conditioning and HVAC company serving Cape Town and surrounding areas.
 
-In the project directory, you can run:
+The website provides customers with information about the company's services, service areas, testimonials, and contact options while making it easy to request a quote or get in touch through WhatsApp and phone.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌐 Website
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Cooling Experts**
 
-### `npm test`
+Professional HVAC and air conditioning solutions for homes and businesses across Cape Town.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📍 Service Areas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cooling Experts serves customers across:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Northern Suburbs
+- Southern Suburbs
+- Constantia
+- Cape Town CBD
+- Green Point
+- Sea Point
+- Surrounding Cape Town areas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Services
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The website showcases the company's main HVAC services:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ❄️ AC Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Professional installation of:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Split air conditioning systems
+- Ducted air conditioning
+- Inverter air conditioners
+- Residential AC systems
+- Commercial AC systems
 
-## Learn More
+### 🔧 Maintenance & Repairs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Maintenance and repair services designed to keep air conditioning systems operating efficiently.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🧊 Cold Rooms & Freezer Rooms
 
-### Code Splitting
+Solutions for businesses requiring temperature-controlled environments, including:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Cold rooms
+- Freezer rooms
+- Temperature-controlled spaces
 
-### Analyzing the Bundle Size
+### 🏢 Commercial HVAC Solutions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+HVAC solutions for commercial environments, businesses, offices, and other professional spaces.
 
-### Making a Progressive Web App
+### ⚡ HVAC Upgrades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Upgrades and improvements for existing air conditioning and HVAC systems.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ✨ Website Features
 
-### Deployment
+- Modern professional design
+- Fully responsive layout
+- Mobile-friendly navigation
+- Light-blue HVAC-inspired color scheme
+- Service cards with professional icons
+- Service detail modals
+- Contact form
+- WhatsApp enquiry functionality
+- Direct phone contact
+- Email contact
+- Testimonials section
+- Service area information
+- Responsive mobile experience
+- Smooth animations
+- Modern UI interactions
+- SEO-friendly page metadata
+- Social media sharing metadata
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 💻 Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The website was built using:
+
+- **React.js**
+- **JavaScript**
+- **HTML5**
+- **CSS3**
+- **React Icons**
+- **Framer Motion**
+- **Create React App**
+
+---
+
+## 📁 Project Structure
+
+```text
+cooling-experts/
+│
+├── public/
+│   ├── favicon.ico
+│   ├── logo.png
+│   ├── manifest.json
+│   └── ...
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── Navbar.js
+│   │   ├── Hero.js
+│   │   ├── Services.js
+│   │   ├── About.js
+│   │   ├── Testimonials.js
+│   │   ├── Contact.js
+│   │   └── Footer.js
+│   │
+│   ├── pages/
+│   │   └── ...
+│   │
+│   ├── styles/
+│   │   ├── global.css
+│   │   ├── navbar.css
+│   │   ├── hero.css
+│   │   ├── services.css
+│   │   ├── about.css
+│   │   ├── testimonials.css
+│   │   └── contact.css
+│   │
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+├── package-lock.json
+└── README.md
