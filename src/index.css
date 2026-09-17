@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* ================================
+     COOLING EXPERTS — PREMIUM THEME
+     ================================ */
+
+  --primary-dark: #102a35;
+  --primary-blue: #17485a;
+  --accent-blue: #62c7e8;
+  --accent-light: #a9e6f5;
+
+  --background: #eef7fa;
+  --background-soft: #f6fbfc;
+  --background-alt: #e3f1f5;
+
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-solid: #ffffff;
+
+  --text-main: #16313b;
+  --text-dark: #102a33;
+  --text-muted: #647f89;
+
+  --border: rgba(23, 72, 90, 0.12);
+
+  --shadow-soft: 0 10px 35px rgba(16, 52, 65, 0.08);
+  --shadow-medium: 0 20px 50px rgba(16, 52, 65, 0.12);
+
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* ================================
+   GLOBAL RESET
+   ================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(98, 199, 232, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(169, 230, 245, 0.14),
+      transparent 28%
+    ),
+    var(--background);
+
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+/* ================================
+   SECTION BACKGROUND SYSTEM
+   ================================ */
+
+section {
+  position: relative;
+}
+
+
+/* Light sections */
+
+.section-light {
+  background: var(--background);
+}
+
+
+/* Slightly different sections */
+
+.section-soft {
+  background:
+    linear-gradient(
+      135deg,
+      #f7fcfd 0%,
+      #eaf6f9 50%,
+      #f5fbfc 100%
+    );
+}
+
+
+/* Blue section */
+
+.section-blue {
+  background:
+    linear-gradient(
+      135deg,
+      #123746 0%,
+      #17485a 50%,
+      #1d596d 100%
+    );
+
+  color: white;
+}
+
+
+/* ================================
+   PREMIUM GLOW
+   ================================ */
+
+.section-glow::before {
+  content: "";
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  top: -120px;
+  right: -100px;
+
+  background: rgba(98, 199, 232, 0.12);
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  pointer-events: none;
 }

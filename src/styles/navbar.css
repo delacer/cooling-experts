@@ -1,0 +1,381 @@
+/* ==========================================
+   NAVBAR
+   ========================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: transparent;
+
+  transition:
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* ==========================================
+   SCROLLED NAVBAR
+   ========================================== */
+
+.navbar.scrolled {
+  background: rgba(7, 28, 52, 0.92);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   CONTAINER
+   ========================================== */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ==========================================
+   LOGO
+   ========================================== */
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 1.25rem;
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+
+  transition: opacity 0.2s ease;
+}
+
+.navbar-logo:hover {
+  opacity: 0.9;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+
+  line-height: 1;
+}
+
+.logo-text {
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   NAVIGATION LINKS
+   ========================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 2rem;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   LINK HOVER LINE
+   ========================================== */
+
+.nav-links > li:not(.nav-cta-item) > a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background: #ffffff;
+
+  transition: width 0.25s ease;
+}
+
+.nav-links > li:not(.nav-cta-item) > a:hover::after {
+  width: 100%;
+}
+
+
+/* ==========================================
+   CALL TO ACTION BUTTON
+   ========================================== */
+
+.nav-cta-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  padding: 0.65rem 1.15rem;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #0b2545 !important;
+
+  font-weight: 700 !important;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.nav-cta-btn:hover {
+  background: #f4f8fb;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.phone-icon {
+  font-size: 1rem;
+}
+
+
+/* ==========================================
+   MOBILE MENU BUTTON
+   ========================================== */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.bar {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* ==========================================
+   HAMBURGER → X
+   ========================================== */
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    padding: 0.9rem 1.25rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    padding: 1.5rem;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    background: rgba(7, 28, 52, 0.97);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .nav-links li:not(.nav-cta-item) a {
+    display: block;
+
+    padding: 0.9rem 0;
+
+    font-size: 1rem;
+  }
+
+  .nav-links > li:not(.nav-cta-item) > a::after {
+    display: none;
+  }
+
+  .nav-cta-item {
+    margin-top: 0.75rem;
+  }
+
+  .nav-cta-btn {
+    width: 100%;
+
+    padding: 0.85rem 1rem;
+  }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+   ========================================== */
+
+@media (max-width: 400px) {
+
+  .navbar-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.1rem;
+  }
+
+  .logo-icon {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar,
+  .nav-links,
+  .nav-cta-btn,
+  .bar {
+    transition: none;
+  }
+}
