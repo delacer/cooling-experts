@@ -1,52 +1,132 @@
 :root {
-  /* Brand */
-  --baby-blue: #9edff2;
-  --baby-blue-light: #dff5fc;
-  --baby-blue-soft: #eefaff;
+  /* ================================
+     COOLING EXPERTS — PREMIUM THEME
+     ================================ */
 
-  --navy: #0b2940;
-  --navy-light: #163f5c;
+  --primary-dark: #102a35;
+  --primary-blue: #17485a;
+  --accent-blue: #62c7e8;
+  --accent-light: #a9e6f5;
 
-  --black: #101820;
-  --white: #ffffff;
+  --background: #eef7fa;
+  --background-soft: #f6fbfc;
+  --background-alt: #e3f1f5;
 
-  /* Website */
-  --background: #eaf8fd;
-  --background-light: #f5fcff;
-  --background-blue: #d9f2fa;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-solid: #ffffff;
 
-  --surface: #ffffff;
+  --text-main: #16313b;
+  --text-dark: #102a33;
+  --text-muted: #647f89;
 
-  --text-main: #102b3c;
-  --text-dark: #0b1d2a;
-  --text-muted: #607987;
+  --border: rgba(23, 72, 90, 0.12);
 
-  --border: rgba(11, 41, 64, 0.12);
-
-  --shadow-soft: 0 10px 30px rgba(11, 41, 64, 0.08);
-  --shadow-medium: 0 20px 45px rgba(11, 41, 64, 0.12);
+  --shadow-soft: 0 10px 35px rgba(16, 52, 65, 0.08);
+  --shadow-medium: 0 20px 50px rgba(16, 52, 65, 0.12);
 
   --font-family: system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
+
+/* ================================
+   GLOBAL RESET
+   ================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
-
   background:
     radial-gradient(
-      circle at 10% 0%,
-      rgba(255, 255, 255, 0.95),
+      circle at 10% 10%,
+      rgba(98, 199, 232, 0.12),
       transparent 30%
     ),
-    linear-gradient(
-      135deg,
-      #eefaff 0%,
-      #e4f6fc 50%,
-      #d8f1fa 100%
-    );
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(169, 230, 245, 0.14),
+      transparent 28%
+    ),
+    var(--background);
 
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+
+/* ================================
+   SECTION BACKGROUND SYSTEM
+   ================================ */
+
+section {
+  position: relative;
+}
+
+
+/* Light sections */
+
+.section-light {
+  background: var(--background);
+}
+
+
+/* Slightly different sections */
+
+.section-soft {
+  background:
+    linear-gradient(
+      135deg,
+      #f7fcfd 0%,
+      #eaf6f9 50%,
+      #f5fbfc 100%
+    );
+}
+
+
+/* Blue section */
+
+.section-blue {
+  background:
+    linear-gradient(
+      135deg,
+      #123746 0%,
+      #17485a 50%,
+      #1d596d 100%
+    );
+
+  color: white;
+}
+
+
+/* ================================
+   PREMIUM GLOW
+   ================================ */
+
+.section-glow::before {
+  content: "";
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  top: -120px;
+  right: -100px;
+
+  background: rgba(98, 199, 232, 0.12);
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  pointer-events: none;
 }
