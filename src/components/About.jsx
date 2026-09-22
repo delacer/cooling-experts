@@ -16,28 +16,29 @@ const About = () => {
   const strengths = [
     {
       icon: FiShield,
-      title: "Reliable Service",
-      text: "Dependable workmanship and service you can count on.",
+      title: "Reliable HVAC Service",
+      text: "Dependable air conditioning and HVAC workmanship you can count on.",
     },
     {
       icon: FiTool,
-      title: "Expert Workmanship",
-      text: "Professional installation, maintenance, and repairs.",
+      title: "Professional Workmanship",
+      text: "Professional air conditioning installation, maintenance, repairs and servicing.",
     },
     {
       icon: FiZap,
-      title: "Efficient Solutions",
-      text: "Modern systems designed with performance and efficiency in mind.",
+      title: "Efficient Cooling Solutions",
+      text: "Modern air conditioning and refrigeration solutions designed for performance and energy efficiency.",
     },
   ];
 
   const serviceAreas = [
+    "Constantia",
+    "Tokai",
     "Northern Suburbs",
     "Southern Suburbs",
-    "Constantia",
-    "Cape Town CBD",
     "Green Point",
     "Sea Point",
+    "Camps Bay",
   ];
 
   return (
@@ -61,8 +62,8 @@ const About = () => {
             </span>
 
             <h2 id="about-heading">
-              Comfort engineered.
-              <span>Service you can trust.</span>
+              Professional HVAC services
+              <span>across Cape Town.</span>
             </h2>
 
           </div>
@@ -70,9 +71,10 @@ const About = () => {
           <div className="about-intro">
 
             <p>
-              Cooling Experts provides professional air conditioning
-              and refrigeration solutions for homes, businesses, and
-              commercial properties across Cape Town.
+              Cooling Experts provides professional air conditioning,
+              HVAC and refrigeration solutions for homes, businesses
+              and commercial properties across Cape Town and
+              surrounding areas.
             </p>
 
           </div>
@@ -94,11 +96,15 @@ const About = () => {
 
               <img
                 src={aboutImage}
-                alt="Cooling Experts air conditioning technician"
+                alt="HVAC technician providing professional air conditioning service in Cape Town"
                 loading="lazy"
+                decoding="async"
               />
 
-              <div className="about-image-overlay"></div>
+              <div
+                className="about-image-overlay"
+                aria-hidden="true"
+              ></div>
 
               {/* IMAGE LABEL */}
 
@@ -119,15 +125,23 @@ const About = () => {
 
             {/* FLOATING LOCATION CARD */}
 
-            <div className="about-location-card">
+            <div
+              className="about-location-card"
+              aria-label="Cooling Experts service area"
+            >
 
-              <div className="about-location-icon">
+              <div
+                className="about-location-icon"
+                aria-hidden="true"
+              >
                 <FiMapPin />
               </div>
 
               <div>
                 <span>Serving</span>
-                <strong>Cape Town & surrounds</strong>
+                <strong>
+                  Cape Town & surrounding areas
+                </strong>
               </div>
 
             </div>
@@ -140,27 +154,30 @@ const About = () => {
           <div className="about-content">
 
             <span className="about-content-label">
-              Built around your comfort
+              Your local HVAC specialists
             </span>
 
             <h3>
-              More than cooling.
+              Reliable air conditioning.
               <br />
-              <span>We create better spaces.</span>
+              <span>Comfort you can depend on.</span>
             </h3>
 
             <p className="about-lead">
-              At Cooling Experts, we believe a good air-conditioning
-              system should do more than simply cool a room. It should
-              provide reliable comfort, operate efficiently, and be
-              installed correctly from the start.
+              At Cooling Experts, we provide professional air
+              conditioning and HVAC services designed to keep
+              homes, offices and commercial spaces comfortable
+              throughout the year.
             </p>
 
             <p>
-              From residential installations to commercial HVAC and
-              refrigeration solutions, our approach is simple:
-              understand the property, recommend the right solution,
-              and deliver professional workmanship that lasts.
+              From air conditioning installation and repairs to
+              preventative maintenance, commercial HVAC and
+              refrigeration solutions, we focus on understanding
+              each property and recommending the right cooling
+              solution for the space. Our goal is to deliver
+              dependable performance, efficient operation and
+              professional workmanship.
             </p>
 
 
@@ -178,7 +195,10 @@ const About = () => {
                     key={strength.title}
                   >
 
-                    <div className="about-strength-icon">
+                    <div
+                      className="about-strength-icon"
+                      aria-hidden="true"
+                    >
                       <Icon />
                     </div>
 
@@ -209,17 +229,19 @@ const About = () => {
               <a
                 href="#contact"
                 className="about-primary-btn"
+                aria-label="Request a quote for HVAC services from Cooling Experts"
               >
                 <span>Request a Quote</span>
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
               <a
                 href="#services"
                 className="about-secondary-btn"
+                aria-label="Explore Cooling Experts air conditioning and HVAC services"
               >
                 Explore Our Services
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
             </div>
@@ -233,7 +255,10 @@ const About = () => {
             SERVICE AREA STRIP
         ========================================= */}
 
-        <div className="about-area">
+        <section
+          className="about-area"
+          aria-labelledby="about-area-heading"
+        >
 
           <div className="about-area-heading">
 
@@ -242,20 +267,27 @@ const About = () => {
             </span>
 
             <div>
+
               <span className="about-area-eyebrow">
                 Where we work
               </span>
 
-              <h3>
-                Serving Cape Town
-                <span>and surrounding areas.</span>
+              <h3 id="about-area-heading">
+                HVAC services in Cape Town
+                <span>
+                  across our key service areas.
+                </span>
               </h3>
+
             </div>
 
           </div>
 
 
-          <div className="about-area-list">
+          <div
+            className="about-area-list"
+            aria-label="Cooling Experts service areas"
+          >
 
             {serviceAreas.map((area) => (
 
@@ -264,12 +296,15 @@ const About = () => {
                 key={area}
               >
 
-                <span className="about-area-check">
+                <span
+                  className="about-area-check"
+                  aria-hidden="true"
+                >
                   <FiCheck />
                 </span>
 
                 <span>
-                  {area}
+                  Air conditioning services in {area}
                 </span>
 
               </div>
@@ -278,7 +313,7 @@ const About = () => {
 
           </div>
 
-        </div>
+        </section>
 
       </div>
     </section>

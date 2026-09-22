@@ -30,33 +30,36 @@ const Services = ({ onSelectService }) => {
     {
       id: "installation",
       number: "01",
-      title: "AC Installation",
+      title: "Air Conditioning Installation",
       label: "Installation",
       shortLabel: "Climate Control",
       description:
-        "Professional sizing and installation of split, ducted, and inverter air conditioning systems for homes and businesses.",
+        "Professional air conditioning installation for homes, offices, and businesses across Cape Town. We provide system sizing, installation, testing, and commissioning for split, ducted, and inverter air conditioning systems.",
       icon: FiWind,
       image: installationImage,
-      alt: "Professional air conditioning installation",
+      alt:
+        "Professional air conditioning installation service in Cape Town",
       featured: true,
       benefits: [
         "Professional system sizing",
         "Split and inverter systems",
-        "Expert installation",
+        "Expert air conditioning installation",
         "Testing and commissioning",
       ],
     },
+
     {
       id: "maintenance",
       number: "02",
-      title: "Maintenance & Repairs",
+      title: "Air Conditioning Maintenance & Repairs",
       label: "Maintenance",
       shortLabel: "Service & Repairs",
       description:
-        "Preventative servicing, fault-finding, and reliable repairs to keep your air conditioning running efficiently year-round.",
+        "Reliable air conditioning maintenance and repair services across Cape Town. Preventative servicing, fault finding, diagnostics, cleaning, and performance checks help keep your cooling system operating efficiently.",
       icon: FiTool,
       image: maintenanceImage,
-      alt: "Air conditioning maintenance and repairs",
+      alt:
+        "Air conditioning maintenance and repair service in Cape Town",
       benefits: [
         "Preventative maintenance",
         "Fault finding and diagnostics",
@@ -64,17 +67,19 @@ const Services = ({ onSelectService }) => {
         "Performance checks",
       ],
     },
+
     {
       id: "cold-rooms",
       number: "03",
-      title: "Cold & Freezer Rooms",
+      title: "Cold & Freezer Room Solutions",
       label: "Refrigeration",
       shortLabel: "Commercial Refrigeration",
       description:
-        "Custom design, installation, and servicing for commercial cold rooms, freezer rooms, and display chillers.",
+        "Professional cold room and freezer room solutions for commercial properties in Cape Town. We provide installation, refrigeration systems, display chillers, servicing, and ongoing maintenance.",
       icon: FiBox,
       image: coldRoomsImage,
-      alt: "Commercial cold and freezer room",
+      alt:
+        "Commercial cold room and freezer room refrigeration solution in Cape Town",
       benefits: [
         "Cold room installation",
         "Freezer room solutions",
@@ -82,6 +87,7 @@ const Services = ({ onSelectService }) => {
         "Refrigeration servicing",
       ],
     },
+
     {
       id: "commercial",
       number: "04",
@@ -89,28 +95,31 @@ const Services = ({ onSelectService }) => {
       label: "Commercial",
       shortLabel: "Commercial HVAC",
       description:
-        "Tailored climate control systems, installation, and maintenance for offices, retail spaces, and commercial properties.",
+        "Commercial HVAC solutions for offices, retail spaces, and business properties across Cape Town. We provide climate control installation, system maintenance, and tailored HVAC solutions for commercial environments.",
       icon: FiHome,
       image: commercialImage,
-      alt: "Commercial HVAC system",
+      alt:
+        "Commercial HVAC climate control system for a business property in Cape Town",
       benefits: [
         "Commercial HVAC systems",
         "Office climate control",
-        "Retail solutions",
+        "Retail HVAC solutions",
         "Ongoing maintenance",
       ],
     },
+
     {
       id: "upgrades",
       number: "05",
-      title: "Energy-Efficient Upgrades",
+      title: "Energy-Efficient Air Conditioning Upgrades",
       label: "Efficiency",
       shortLabel: "Energy Efficiency",
       description:
-        "Upgrade older systems with modern inverter technology and smart controls to improve efficiency and reduce energy costs.",
+        "Upgrade older air conditioning systems with modern inverter technology and efficient climate controls. Our energy-efficient HVAC upgrades are designed to improve performance and help reduce unnecessary energy consumption.",
       icon: FiZap,
       image: upgradesImage,
-      alt: "Energy efficient air conditioning system",
+      alt:
+        "Energy-efficient air conditioning system upgrade in Cape Town",
       benefits: [
         "Inverter technology",
         "Improved energy efficiency",
@@ -163,40 +172,71 @@ const Services = ({ onSelectService }) => {
         className="services"
         aria-labelledby="services-heading"
       >
-        <div className="services-grid-pattern"></div>
+        {/* =========================
+            BACKGROUND
+        ========================== */}
 
-        <div className="services-orb services-orb-one"></div>
-        <div className="services-orb services-orb-two"></div>
+        <div
+          className="services-grid-pattern"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          className="services-orb services-orb-one"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          className="services-orb services-orb-two"
+          aria-hidden="true"
+        ></div>
+
 
         <div className="services-container">
 
-          {/* HEADER */}
+          {/* =========================
+              SEO-OPTIMIZED HEADER
+          ========================== */}
+
           <header className="services-header">
+
             <div className="services-heading">
 
               <div className="services-eyebrow-wrap">
-                <span className="services-eyebrow-line"></span>
+
+                <span
+                  className="services-eyebrow-line"
+                  aria-hidden="true"
+                ></span>
 
                 <span className="services-eyebrow">
-                  What We Offer
+                  HVAC Services in Cape Town
                 </span>
+
               </div>
 
+
               <h2 id="services-heading">
-                Cooling solutions
-                <span>you can rely on.</span>
+                Air conditioning & HVAC solutions
+                <span>for homes and businesses.</span>
               </h2>
 
+
               <p className="services-heading-description">
-                Professional air conditioning, HVAC and refrigeration
-                solutions designed for homes, businesses and commercial
-                properties across Cape Town.
+                Cooling Experts provides professional air conditioning,
+                HVAC and refrigeration services across Cape Town,
+                including installation, maintenance, repairs,
+                commercial climate control, cold rooms and
+                energy-efficient system upgrades.
               </p>
+
             </div>
+
 
             <div className="services-intro">
 
               <div className="services-intro-top">
+
                 <span className="services-intro-number">
                   01 — 05
                 </span>
@@ -205,18 +245,25 @@ const Services = ({ onSelectService }) => {
                   <span></span>
                   Cape Town
                 </span>
+
               </div>
 
               <p>
-                From installation and repairs to commercial climate
-                control and refrigeration, our services are built around
-                reliable performance and professional workmanship.
+                From residential air conditioning installation and
+                repairs to commercial HVAC and refrigeration
+                solutions, we provide reliable climate control
+                systems designed around your property.
               </p>
+
             </div>
+
           </header>
 
 
-          {/* SERVICE GRID */}
+          {/* =========================
+              SERVICE GRID
+          ========================== */}
+
           <div className="services-grid">
 
             {servicesList.map((service) => {
@@ -233,18 +280,27 @@ const Services = ({ onSelectService }) => {
                     ${service.featured ? "featured" : ""}
                     ${isActive ? "active" : ""}
                   `}
+                  aria-labelledby={`service-title-${service.id}`}
                 >
 
-                  {/* IMAGE */}
+                  {/* =========================
+                      SERVICE IMAGE
+                  ========================== */}
+
                   <div className="service-card-image">
 
                     <img
                       src={service.image}
                       alt={service.alt}
-                      loading="lazy"
+                      loading={service.featured ? "eager" : "lazy"}
+                      decoding="async"
                     />
 
-                    <div className="service-card-overlay"></div>
+                    <div
+                      className="service-card-overlay"
+                      aria-hidden="true"
+                    ></div>
+
 
                     <div className="service-card-top">
 
@@ -258,12 +314,14 @@ const Services = ({ onSelectService }) => {
 
                     </div>
 
+
                     <div
                       className="service-card-icon"
                       aria-hidden="true"
                     >
                       <Icon />
                     </div>
+
 
                     {service.featured && (
                       <div className="featured-image-content">
@@ -287,7 +345,10 @@ const Services = ({ onSelectService }) => {
                   </div>
 
 
-                  {/* CONTENT */}
+                  {/* =========================
+                      SERVICE CONTENT
+                  ========================== */}
+
                   <div className="service-card-content">
 
                     <div className="service-card-heading">
@@ -296,15 +357,17 @@ const Services = ({ onSelectService }) => {
                         {service.label}
                       </span>
 
-                      <h3>
+                      <h3 id={`service-title-${service.id}`}>
                         {service.title}
                       </h3>
 
                     </div>
 
+
                     <p>
                       {service.description}
                     </p>
+
 
                     <button
                       type="button"
@@ -312,7 +375,7 @@ const Services = ({ onSelectService }) => {
                       onClick={() =>
                         handleServiceSelect(service)
                       }
-                      aria-label={`Explore ${service.title}`}
+                      aria-label={`View details for ${service.title}`}
                     >
 
                       <span>
@@ -337,14 +400,21 @@ const Services = ({ onSelectService }) => {
           </div>
 
 
-          {/* BOTTOM CTA */}
+          {/* =========================
+              BOTTOM CTA
+          ========================== */}
+
           <div className="services-bottom">
 
             <div className="services-bottom-copy">
 
-              <span className="services-bottom-line"></span>
+              <span
+                className="services-bottom-line"
+                aria-hidden="true"
+              ></span>
 
               <div>
+
                 <small>
                   HAVE A PROJECT IN MIND?
                 </small>
@@ -352,21 +422,25 @@ const Services = ({ onSelectService }) => {
                 <span>
                   Need a cooling solution for your property?
                 </span>
+
               </div>
 
             </div>
 
+
             <a
               href="#contact"
               className="services-bottom-link"
+              aria-label="Contact Cooling Experts about your HVAC project"
             >
               <span>
                 Speak to Cooling Experts
               </span>
 
-              <span>
+              <span aria-hidden="true">
                 <FiArrowUpRight />
               </span>
+
             </a>
 
           </div>
@@ -375,7 +449,10 @@ const Services = ({ onSelectService }) => {
       </section>
 
 
-      {/* SERVICE MODAL */}
+      {/* =========================
+          SERVICE DETAILS MODAL
+      ========================== */}
+
       {selectedService && (
         <div
           className="service-modal"
@@ -393,25 +470,34 @@ const Services = ({ onSelectService }) => {
           >
 
             {/* CLOSE */}
+
             <button
               type="button"
               className="service-modal-close"
               onClick={closeModal}
               aria-label="Close service details"
             >
-              <FiX />
+              <FiX aria-hidden="true" />
             </button>
 
 
-            {/* MODAL IMAGE */}
+            {/* =========================
+                MODAL IMAGE
+            ========================== */}
+
             <div className="service-modal-image">
 
               <img
                 src={selectedService.image}
                 alt={selectedService.alt}
+                decoding="async"
               />
 
-              <div className="service-modal-image-overlay"></div>
+              <div
+                className="service-modal-image-overlay"
+                aria-hidden="true"
+              ></div>
+
 
               <div className="modal-image-top">
 
@@ -424,6 +510,7 @@ const Services = ({ onSelectService }) => {
                 </span>
 
               </div>
+
 
               <div className="modal-image-bottom">
 
@@ -440,7 +527,10 @@ const Services = ({ onSelectService }) => {
             </div>
 
 
-            {/* MODAL BODY */}
+            {/* =========================
+                MODAL BODY
+            ========================== */}
+
             <div className="service-modal-body">
 
               <div className="service-modal-heading">
@@ -461,12 +551,16 @@ const Services = ({ onSelectService }) => {
               </p>
 
 
-              {/* BENEFITS */}
+              {/* =========================
+                  SERVICE BENEFITS
+              ========================== */}
+
               <div className="service-benefits">
 
                 <div className="service-benefits-heading">
 
                   <div>
+
                     <span>
                       What we provide
                     </span>
@@ -474,6 +568,7 @@ const Services = ({ onSelectService }) => {
                     <small>
                       Service scope
                     </small>
+
                   </div>
 
                   <span className="service-benefits-count">
@@ -492,7 +587,10 @@ const Services = ({ onSelectService }) => {
                         key={index}
                       >
 
-                        <span className="benefit-icon">
+                        <span
+                          className="benefit-icon"
+                          aria-hidden="true"
+                        >
                           <FiCheck />
                         </span>
 
@@ -509,7 +607,10 @@ const Services = ({ onSelectService }) => {
               </div>
 
 
-              {/* MODAL ACTIONS */}
+              {/* =========================
+                  MODAL ACTIONS
+              ========================== */}
+
               <div className="service-modal-actions">
 
                 <a
@@ -521,7 +622,7 @@ const Services = ({ onSelectService }) => {
                     Request a Quote
                   </span>
 
-                  <FiArrowUpRight />
+                  <FiArrowUpRight aria-hidden="true" />
                 </a>
 
 
@@ -532,38 +633,49 @@ const Services = ({ onSelectService }) => {
                   className="modal-whatsapp-btn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Ask Cooling Experts about ${selectedService.title} on WhatsApp`}
                 >
-                  <FiMessageCircle />
+                  <FiMessageCircle aria-hidden="true" />
 
                   <span>
                     WhatsApp Us
                   </span>
+
                 </a>
 
 
                 <a
                   href="tel:+27729336594"
                   className="modal-secondary-btn"
+                  aria-label="Call Cooling Experts at 072 933 6594"
                 >
-                  <FiPhone />
+                  <FiPhone aria-hidden="true" />
 
                   <span>
                     072 933 6594
                   </span>
+
                 </a>
 
               </div>
 
 
-              {/* TRUST NOTE */}
+              {/* =========================
+                  LOCAL SERVICE NOTE
+              ========================== */}
+
               <div className="service-modal-trust">
 
-                <span className="trust-icon">
+                <span
+                  className="trust-icon"
+                  aria-hidden="true"
+                >
                   <FiMapPin />
                 </span>
 
                 <span>
-                  Serving homes and businesses across Cape Town
+                  Serving homes, businesses and commercial
+                  properties across Cape Town.
                 </span>
 
               </div>
@@ -574,6 +686,7 @@ const Services = ({ onSelectService }) => {
 
         </div>
       )}
+
     </>
   );
 };

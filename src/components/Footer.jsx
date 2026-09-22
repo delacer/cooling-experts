@@ -3,19 +3,33 @@ import {
   FiArrowUpRight,
   FiMail,
   FiMapPin,
-  FiMessageCircle,
   FiPhone,
   FiWind,
 } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 import "../styles/footer.css";
-import logo from "../assets/hero-bg.png";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const serviceAreas = [
+    "Constantia",
+    "Tokai",
+    "Northern Suburbs",
+    "Southern Suburbs",
+    "Green Point",
+    "Sea Point",
+    "Camps Bay",
+  ];
+
   return (
-    <footer className="footer" id="footer">
+    <footer
+      className="footer"
+      id="footer"
+      aria-label="Cooling Experts footer"
+    >
       <div className="footer-container">
 
         {/* ================================
@@ -24,39 +38,54 @@ const Footer = () => {
 
         <div className="footer-main">
 
-          {/* BRAND */}
+          {/* BRAND / BUSINESS INFORMATION */}
+
           <div className="footer-brand">
 
-            <a href="#home" className="footer-logo">
+            <a
+              href="#hero"
+              className="footer-logo"
+              aria-label="Cooling Experts - Air Conditioning and HVAC Services in Cape Town"
+            >
               <img
                 src={logo}
-                alt="Cooling Experts"
+                alt="Cooling Experts - HVAC Services Cape Town"
+                loading="lazy"
+                decoding="async"
               />
             </a>
 
             <p className="footer-description">
-              Professional air conditioning, HVAC, and refrigeration
-              solutions for homes, businesses, and commercial properties
-              across Cape Town.
+              Cooling Experts provides professional air conditioning,
+              HVAC and refrigeration solutions for homes, businesses
+              and commercial properties across Cape Town and surrounding
+              areas.
             </p>
 
             <div className="footer-actions">
+
+              {/* WhatsApp */}
 
               <a
                 href="https://wa.me/27729336594?text=Hi%20Cooling%20Experts,%20I'd%20like%20to%20make%20an%20enquiry."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-action footer-action-primary"
+                aria-label="Contact Cooling Experts on WhatsApp"
               >
-                <FiMessageCircle />
-                <span>WhatsApp Us</span>
+                <FaWhatsapp aria-hidden="true" />
+                <span>Chat Now</span>
               </a>
+
+
+              {/* Phone */}
 
               <a
                 href="tel:+27729336594"
                 className="footer-action footer-action-secondary"
+                aria-label="Call Cooling Experts at 072 933 6594"
               >
-                <FiPhone />
+                <FiPhone aria-hidden="true" />
                 <span>Call Now</span>
               </a>
 
@@ -65,38 +94,44 @@ const Footer = () => {
           </div>
 
 
-          {/* QUICK LINKS */}
+          {/* ================================
+              QUICK LINKS
+          ================================= */}
+
           <div className="footer-column">
 
-            <span className="footer-column-title">
+            <h2 className="footer-column-title">
               Quick Links
-            </span>
+            </h2>
 
-            <nav className="footer-links">
+            <nav
+              className="footer-links"
+              aria-label="Footer navigation"
+            >
 
               <a href="#hero">
                 Home
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
               <a href="#about">
-                About Us
-                <FiArrowUpRight />
+                About Cooling Experts
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
               <a href="#services">
-                Services
-                <FiArrowUpRight />
+                HVAC Services
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
               <a href="#testimonials">
-                Testimonials
-                <FiArrowUpRight />
+                Customer Testimonials
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
               <a href="#contact">
-                Contact
-                <FiArrowUpRight />
+                Contact Cooling Experts
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
             </nav>
@@ -104,38 +139,59 @@ const Footer = () => {
           </div>
 
 
-          {/* SERVICES */}
+          {/* ================================
+              SERVICES
+          ================================= */}
+
           <div className="footer-column">
 
-            <span className="footer-column-title">
-              Our Services
-            </span>
+            <h2 className="footer-column-title">
+              Our HVAC Services
+            </h2>
 
-            <nav className="footer-links">
+            <nav
+              className="footer-links"
+              aria-label="Cooling Experts HVAC services"
+            >
 
-              <a href="#services">
+              <a
+                href="#services"
+                aria-label="Air conditioning installation services in Cape Town"
+              >
                 AC Installation
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
-              <a href="#services">
+              <a
+                href="#services"
+                aria-label="Air conditioning maintenance and repair services in Cape Town"
+              >
                 Maintenance & Repairs
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
-              <a href="#services">
+              <a
+                href="#services"
+                aria-label="Cold and freezer room solutions in Cape Town"
+              >
                 Cold & Freezer Rooms
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
-              <a href="#services">
+              <a
+                href="#services"
+                aria-label="Commercial HVAC solutions in Cape Town"
+              >
                 Commercial HVAC
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
-              <a href="#services">
+              <a
+                href="#services"
+                aria-label="Energy-efficient air conditioning upgrades in Cape Town"
+              >
                 Energy-Efficient Upgrades
-                <FiArrowUpRight />
+                <FiArrowUpRight aria-hidden="true" />
               </a>
 
             </nav>
@@ -143,20 +199,28 @@ const Footer = () => {
           </div>
 
 
-          {/* CONTACT */}
+          {/* ================================
+              CONTACT / LOCAL BUSINESS
+          ================================= */}
+
           <div className="footer-column footer-contact-column">
 
-            <span className="footer-column-title">
-              Get In Touch
-            </span>
+            <h2 className="footer-column-title">
+              Contact Cooling Experts
+            </h2>
 
+
+            {/* Phone */}
 
             <a
               href="tel:+27729336594"
               className="footer-contact-item"
+              aria-label="Call Cooling Experts at 072 933 6594"
             >
-
-              <span className="footer-contact-icon">
+              <span
+                className="footer-contact-icon"
+                aria-hidden="true"
+              >
                 <FiPhone />
               </span>
 
@@ -164,16 +228,20 @@ const Footer = () => {
                 <small>Phone</small>
                 <strong>072 933 6594</strong>
               </span>
-
             </a>
 
+
+            {/* Email */}
 
             <a
               href="mailto:coolingexperts90@gmail.com"
               className="footer-contact-item"
+              aria-label="Email Cooling Experts"
             >
-
-              <span className="footer-contact-icon">
+              <span
+                className="footer-contact-icon"
+                aria-hidden="true"
+              >
                 <FiMail />
               </span>
 
@@ -183,13 +251,19 @@ const Footer = () => {
                   coolingexperts90@gmail.com
                 </strong>
               </span>
-
             </a>
 
 
-            <div className="footer-contact-item">
+            {/* Service Area */}
 
-              <span className="footer-contact-icon">
+            <div
+              className="footer-contact-item"
+              aria-label="Cooling Experts service area"
+            >
+              <span
+                className="footer-contact-icon"
+                aria-hidden="true"
+              >
                 <FiMapPin />
               </span>
 
@@ -199,7 +273,6 @@ const Footer = () => {
                   Cape Town & Surrounding Areas
                 </strong>
               </span>
-
             </div>
 
           </div>
@@ -211,33 +284,41 @@ const Footer = () => {
             SERVICE COVERAGE
         ================================= */}
 
-        <div className="footer-area">
+        <section
+          className="footer-area"
+          aria-labelledby="footer-area-heading"
+        >
 
           <div className="footer-area-heading">
 
-            <span className="footer-area-icon">
+            <span
+              className="footer-area-icon"
+              aria-hidden="true"
+            >
               <FiWind />
             </span>
 
-            <span>
-              Serving Cape Town
-            </span>
+            <h2 id="footer-area-heading">
+              HVAC Services Across Cape Town
+            </h2>
 
           </div>
 
 
-          <div className="footer-area-list">
+          <div
+            className="footer-area-list"
+            aria-label="Cooling Experts service areas"
+          >
 
-            <span>Northern Suburbs</span>
-            <span>Southern Suburbs</span>
-            <span>Constantia</span>
-            <span>Cape Town CBD</span>
-            <span>Green Point</span>
-            <span>Sea Point</span>
+            {serviceAreas.map((area) => (
+              <span key={area}>
+                {area}
+              </span>
+            ))}
 
           </div>
 
-        </div>
+        </section>
 
 
         {/* ================================
@@ -254,7 +335,10 @@ const Footer = () => {
 
           <div className="footer-bottom-center">
 
-            <span className="footer-status-dot"></span>
+            <span
+              className="footer-status-dot"
+              aria-hidden="true"
+            ></span>
 
             <span>
               Professional HVAC Solutions
@@ -266,9 +350,10 @@ const Footer = () => {
           <a
             href="#hero"
             className="footer-back-top"
+            aria-label="Back to top of Cooling Experts website"
           >
             <span>Back to top</span>
-            <FiArrowUpRight />
+            <FiArrowUpRight aria-hidden="true" />
           </a>
 
         </div>

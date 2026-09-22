@@ -15,8 +15,8 @@ const Testimonials = () => {
       id: 1,
       quote:
         "The team was professional from start to finish. The installation was neat, efficient, and exactly what we needed for our home.",
-      name: "Customer Name",
-      service: "AC Installation",
+      name: "George Jacobs",
+      service: "Air Conditioning Installation",
       location: "Cape Town",
       featured: true,
     },
@@ -25,8 +25,8 @@ const Testimonials = () => {
       id: 2,
       quote:
         "Excellent service and very knowledgeable. They quickly identified the problem with our system and had everything running properly again.",
-      name: "Customer Name",
-      service: "AC Repair",
+      name: "Candice M",
+      service: "Air Conditioning Repair",
       location: "Northern Suburbs",
     },
 
@@ -34,8 +34,8 @@ const Testimonials = () => {
       id: 3,
       quote:
         "Professional workmanship, good communication, and a reliable result. I would definitely recommend Cooling Experts.",
-      name: "Customer Name",
-      service: "Maintenance",
+      name: "Charles Robertson",
+      service: "Air Conditioning Maintenance",
       location: "Southern Suburbs",
     },
   ];
@@ -55,10 +55,20 @@ const Testimonials = () => {
       aria-labelledby="testimonials-heading"
     >
       {/* Technical background */}
-      <div className="testimonials-grid-pattern"></div>
+      <div
+        className="testimonials-grid-pattern"
+        aria-hidden="true"
+      ></div>
 
-      <div className="testimonials-orb testimonials-orb-one"></div>
-      <div className="testimonials-orb testimonials-orb-two"></div>
+      <div
+        className="testimonials-orb testimonials-orb-one"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        className="testimonials-orb testimonials-orb-two"
+        aria-hidden="true"
+      ></div>
 
       <div className="testimonials-container">
 
@@ -71,16 +81,21 @@ const Testimonials = () => {
           <div className="testimonials-heading">
 
             <div className="testimonials-eyebrow-wrap">
-              <span className="testimonials-eyebrow-line"></span>
+
+              <span
+                className="testimonials-eyebrow-line"
+                aria-hidden="true"
+              ></span>
 
               <span className="testimonials-eyebrow">
-                Client Experiences
+                Customer Reviews
               </span>
+
             </div>
 
             <h2 id="testimonials-heading">
-              Trusted by customers.
-              <span>Proven through service.</span>
+              Customer experiences with
+              <span>Cooling Experts.</span>
             </h2>
 
           </div>
@@ -95,16 +110,16 @@ const Testimonials = () => {
               </span>
 
               <span className="testimonials-intro-status">
-                <span></span>
+                <span aria-hidden="true"></span>
                 Customer Feedback
               </span>
 
             </div>
 
             <p>
-              We believe the quality of our work should speak for
-              itself. Here is what customers have to say about their
-              experience with Cooling Experts.
+              Read what customers have to say about our air
+              conditioning installation, repair and maintenance
+              services across Cape Town and surrounding areas.
             </p>
 
           </div>
@@ -117,11 +132,20 @@ const Testimonials = () => {
         ===================================================== */}
 
         {featuredTestimonial && (
-          <article className="testimonial-featured">
+          <article
+            className="testimonial-featured"
+            aria-labelledby="featured-testimonial-author"
+          >
 
-            <div className="testimonial-featured-glow"></div>
+            <div
+              className="testimonial-featured-glow"
+              aria-hidden="true"
+            ></div>
 
-            <div className="testimonial-featured-number">
+            <div
+              className="testimonial-featured-number"
+              aria-hidden="true"
+            >
               01
             </div>
 
@@ -142,9 +166,15 @@ const Testimonials = () => {
 
               <div className="testimonial-rating-row">
 
-                <div className="testimonial-stars">
+                <div
+                  className="testimonial-stars"
+                  aria-label="5 star customer rating"
+                >
                   {[...Array(5)].map((_, index) => (
-                    <FiStar key={index} />
+                    <FiStar
+                      key={index}
+                      aria-hidden="true"
+                    />
                   ))}
                 </div>
 
@@ -168,7 +198,10 @@ const Testimonials = () => {
 
                 <div className="testimonial-author">
 
-                  <div className="testimonial-avatar">
+                  <div
+                    className="testimonial-avatar"
+                    aria-hidden="true"
+                  >
                     {featuredTestimonial.name
                       .charAt(0)
                       .toUpperCase()}
@@ -176,7 +209,7 @@ const Testimonials = () => {
 
                   <div className="testimonial-author-info">
 
-                    <strong>
+                    <strong id="featured-testimonial-author">
                       {featuredTestimonial.name}
                     </strong>
 
@@ -191,7 +224,7 @@ const Testimonials = () => {
 
                 <div className="testimonial-location">
 
-                  <FiMapPin />
+                  <FiMapPin aria-hidden="true" />
 
                   <span>
                     {featuredTestimonial.location}
@@ -216,7 +249,10 @@ const Testimonials = () => {
                 {featuredTestimonial.service}
               </strong>
 
-              <span className="testimonial-side-divider"></span>
+              <span
+                className="testimonial-side-divider"
+                aria-hidden="true"
+              ></span>
 
               <span className="testimonial-side-label">
                 LOCATION
@@ -229,7 +265,7 @@ const Testimonials = () => {
 
               <div className="testimonial-verified">
 
-                <FiCheckCircle />
+                <FiCheckCircle aria-hidden="true" />
 
                 <span>
                   Professional Service
@@ -254,19 +290,27 @@ const Testimonials = () => {
             <article
               className="testimonial-card"
               key={testimonial.id}
+              aria-labelledby={`testimonial-author-${testimonial.id}`}
             >
 
               <div className="testimonial-card-top">
 
-                <div className="testimonial-stars">
-
+                <div
+                  className="testimonial-stars"
+                  aria-label="5 star customer rating"
+                >
                   {[...Array(5)].map((_, index) => (
-                    <FiStar key={index} />
+                    <FiStar
+                      key={index}
+                      aria-hidden="true"
+                    />
                   ))}
-
                 </div>
 
-                <span className="testimonial-number">
+                <span
+                  className="testimonial-number"
+                  aria-hidden="true"
+                >
                   0{testimonial.id}
                 </span>
 
@@ -282,7 +326,10 @@ const Testimonials = () => {
 
                 <div className="testimonial-author">
 
-                  <div className="testimonial-avatar">
+                  <div
+                    className="testimonial-avatar"
+                    aria-hidden="true"
+                  >
                     {testimonial.name
                       .charAt(0)
                       .toUpperCase()}
@@ -290,7 +337,9 @@ const Testimonials = () => {
 
                   <div className="testimonial-author-info">
 
-                    <strong>
+                    <strong
+                      id={`testimonial-author-${testimonial.id}`}
+                    >
                       {testimonial.name}
                     </strong>
 
@@ -305,7 +354,7 @@ const Testimonials = () => {
 
                 <div className="testimonial-location">
 
-                  <FiMapPin />
+                  <FiMapPin aria-hidden="true" />
 
                   <span>
                     {testimonial.location}
@@ -330,56 +379,68 @@ const Testimonials = () => {
 
           <div className="trust-strip-item">
 
-            <FiCheckCircle />
+            <FiCheckCircle aria-hidden="true" />
 
             <div>
+
               <strong>
-                Professional Workmanship
+                Professional HVAC Workmanship
               </strong>
 
               <span>
-                Quality-focused service
+                Quality-focused air conditioning service
               </span>
+
             </div>
 
           </div>
 
 
-          <div className="trust-strip-divider"></div>
+          <div
+            className="trust-strip-divider"
+            aria-hidden="true"
+          ></div>
 
 
           <div className="trust-strip-item">
 
-            <FiMessageCircle />
+            <FiMessageCircle aria-hidden="true" />
 
             <div>
+
               <strong>
                 Clear Communication
               </strong>
 
               <span>
-                Straightforward service
+                Straightforward service from start to finish
               </span>
+
             </div>
 
           </div>
 
 
-          <div className="trust-strip-divider"></div>
+          <div
+            className="trust-strip-divider"
+            aria-hidden="true"
+          ></div>
 
 
           <div className="trust-strip-item">
 
-            <FiMapPin />
+            <FiMapPin aria-hidden="true" />
 
             <div>
+
               <strong>
-                Cape Town Coverage
+                Cape Town HVAC Coverage
               </strong>
 
               <span>
-                Homes & businesses
+                Air conditioning for homes & businesses
               </span>
+
             </div>
 
           </div>
@@ -396,13 +457,16 @@ const Testimonials = () => {
           <div className="testimonials-bottom-copy">
 
             <div className="testimonials-bottom-label">
-              <span></span>
+
+              <span aria-hidden="true"></span>
+
               READY WHEN YOU ARE
+
             </div>
 
             <h3>
-              Let's get your cooling
-              <span>system right.</span>
+              Need reliable air conditioning
+              <span> service in Cape Town?</span>
             </h3>
 
           </div>
@@ -411,14 +475,20 @@ const Testimonials = () => {
           <a
             href="#contact"
             className="testimonials-cta"
+            aria-label="Request a quote for air conditioning and HVAC services"
           >
+
             <span>
               Request a Quote
             </span>
 
-            <span className="testimonials-cta-icon">
+            <span
+              className="testimonials-cta-icon"
+              aria-hidden="true"
+            >
               <FiArrowUpRight />
             </span>
+
           </a>
 
         </div>

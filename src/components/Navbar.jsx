@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FiPhone } from "react-icons/fi";
+import { FiPhone, FiMenu, FiX } from "react-icons/fi";
 import "../styles/navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Add background effect when scrolling
+  // Detect scrolling
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
@@ -39,23 +39,36 @@ const Navbar = () => {
         {/* ==============================
             LOGO
         ============================== */}
+
         <a
           href="#hero"
           className="navbar-logo"
           onClick={closeMenu}
           aria-label="Cooling Experts - Home"
         >
-          <span className="logo-icon">❄️</span>
-          <span className="logo-text">Cooling Experts</span>
+          <div className="logo-icon">
+            ❄
+          </div>
+
+          <div className="logo-content">
+            <span className="logo-text">
+              Cooling Experts
+            </span>
+
+            <span className="logo-tagline">
+              HVAC Solutions
+            </span>
+          </div>
         </a>
 
 
         {/* ==============================
             MOBILE MENU BUTTON
         ============================== */}
+
         <button
           type="button"
-          className={`menu-toggle ${isOpen ? "active" : ""}`}
+          className="menu-toggle"
           onClick={toggleMenu}
           aria-label={
             isOpen
@@ -65,55 +78,75 @@ const Navbar = () => {
           aria-expanded={isOpen}
           aria-controls="main-navigation"
         >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          {isOpen ? (
+            <FiX />
+          ) : (
+            <FiMenu />
+          )}
         </button>
 
 
         {/* ==============================
-            NAVIGATION LINKS
+            NAVIGATION
         ============================== */}
+
         <ul
           id="main-navigation"
           className={`nav-links ${isOpen ? "open" : ""}`}
         >
 
           <li>
-            <a href="#hero" onClick={closeMenu}>
+            <a
+              href="#hero"
+              onClick={closeMenu}
+            >
               Home
             </a>
           </li>
 
           <li>
-            <a href="#services" onClick={closeMenu}>
+            <a
+              href="#services"
+              onClick={closeMenu}
+            >
               Services
             </a>
           </li>
 
           <li>
-            <a href="#about" onClick={closeMenu}>
+            <a
+              href="#about"
+              onClick={closeMenu}
+            >
               About
             </a>
           </li>
 
           <li>
-            <a href="#testimonials" onClick={closeMenu}>
+            <a
+              href="#testimonials"
+              onClick={closeMenu}
+            >
               Testimonials
             </a>
           </li>
 
           <li>
-            <a href="#contact" onClick={closeMenu}>
+            <a
+              href="#contact"
+              onClick={closeMenu}
+            >
               Contact
             </a>
           </li>
 
 
           {/* ==============================
-              CALL TO ACTION
+              CALL BUTTON
           ============================== */}
+
           <li className="nav-cta-item">
+
             <a
               href="tel:+27729336594"
               className="nav-cta-btn"
@@ -121,8 +154,12 @@ const Navbar = () => {
               aria-label="Call Cooling Experts at 072 933 6594"
             >
               <FiPhone className="phone-icon" />
-              <span>Call Now</span>
+
+              <span>
+                Call Now
+              </span>
             </a>
+
           </li>
 
         </ul>

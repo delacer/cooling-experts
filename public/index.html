@@ -3,38 +3,82 @@
   <head>
     <meta charset="utf-8" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="%PUBLIC_URL%/hero-bg.png" />
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
 
-    <!-- Mobile / Responsive -->
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+
+
+    <!-- =====================================================
+         MOBILE / RESPONSIVE
+    ====================================================== -->
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
 
-    <!-- Browser Theme -->
-    <meta name="theme-color" content="#55b9dc" />
 
-    <!-- SEO -->
+    <!-- =====================================================
+         BROWSER THEME
+    ====================================================== -->
+
+    <meta
+      name="theme-color"
+      content="#55b9dc"
+    />
+
+
+    <!-- =====================================================
+         PRIMARY SEO
+    ====================================================== -->
+
+    <title>
+      Cooling Experts | Air Conditioning & HVAC Services in Cape Town
+    </title>
+
     <meta
       name="description"
-      content="Cooling Experts provides professional air conditioning installation, maintenance, repairs, cold rooms, freezer rooms and commercial HVAC solutions across Cape Town."
+      content="Cooling Experts provides professional air conditioning installation, repairs, maintenance, refrigeration and HVAC services in Constantia, Tokai, Northern and Southern Suburbs, Green Point, Sea Point, Camps Bay and surrounding Cape Town areas."
     />
 
     <meta
-      name="keywords"
-      content="air conditioning Cape Town, AC installation Cape Town, aircon repair Cape Town, aircon maintenance, HVAC Cape Town, cold rooms Cape Town, freezer rooms Cape Town, commercial HVAC"
+      name="author"
+      content="Cooling Experts"
     />
 
-    <meta name="author" content="Cooling Experts" />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
 
 
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Cooling Experts | HVAC Specialists in Cape Town" />
+    <!-- =====================================================
+         CANONICAL URL
+         Replace this with the actual deployed website URL.
+    ====================================================== -->
+
+    <!--
+    <link
+      rel="canonical"
+      href="https://your-actual-domain.co.za/"
+    />
+    -->
+
+
+    <!-- =====================================================
+         OPEN GRAPH / FACEBOOK / WHATSAPP SHARING
+    ====================================================== -->
+
+    <meta
+      property="og:title"
+      content="Cooling Experts | Air Conditioning & HVAC Services in Cape Town"
+    />
 
     <meta
       property="og:description"
-      content="Professional air conditioning installation, maintenance, repairs and commercial HVAC solutions across Cape Town."
+      content="Professional air conditioning installation, repairs, maintenance, refrigeration and HVAC solutions serving Constantia, Tokai, Northern and Southern Suburbs, Green Point, Sea Point, Camps Bay and surrounding Cape Town areas."
     />
 
     <meta
@@ -43,11 +87,34 @@
     />
 
     <meta
+      property="og:site_name"
+      content="Cooling Experts"
+    />
+
+    <meta
+      property="og:locale"
+      content="en_ZA"
+    />
+
+    <meta
       property="og:image"
       content="%PUBLIC_URL%/hero-bg.png"
     />
 
-    <!-- Twitter / Social Preview -->
+    <!--
+    Add this once you have the real deployed URL:
+
+    <meta
+      property="og:url"
+      content="https://your-actual-domain.co.za/"
+    />
+    -->
+
+
+    <!-- =====================================================
+         TWITTER / X SOCIAL PREVIEW
+    ====================================================== -->
+
     <meta
       name="twitter:card"
       content="summary_large_image"
@@ -55,24 +122,111 @@
 
     <meta
       name="twitter:title"
-      content="Cooling Experts | HVAC Specialists in Cape Town"
+      content="Cooling Experts | Air Conditioning & HVAC Services in Cape Town"
     />
 
     <meta
       name="twitter:description"
-      content="Reliable air conditioning and HVAC solutions for homes and businesses across Cape Town."
+      content="Reliable air conditioning, HVAC and refrigeration services across Constantia, Tokai, Northern and Southern Suburbs, Green Point, Sea Point, Camps Bay and surrounding Cape Town areas."
     />
 
     <meta
       name="twitter:image"
       content="%PUBLIC_URL%/hero-bg.png"
     />
-    <title>
-      Cooling Experts | Air Conditioning & HVAC Specialists in Cape Town
-    </title>
+
+
+    <!-- =====================================================
+         LOCAL BUSINESS STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Cooling Experts",
+        "description": "Professional air conditioning, HVAC and refrigeration services for residential, commercial and business properties across Cape Town and surrounding areas.",
+        "telephone": "+27729336594",
+        "email": "coolingexperts90@gmail.com",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Cape Town"
+          },
+          {
+            "@type": "Place",
+            "name": "Constantia"
+          },
+          {
+            "@type": "Place",
+            "name": "Tokai"
+          },
+          {
+            "@type": "Place",
+            "name": "Northern Suburbs"
+          },
+          {
+            "@type": "Place",
+            "name": "Southern Suburbs"
+          },
+          {
+            "@type": "Place",
+            "name": "Green Point"
+          },
+          {
+            "@type": "Place",
+            "name": "Sea Point"
+          },
+          {
+            "@type": "Place",
+            "name": "Camps Bay"
+          }
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Air Conditioning Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Air Conditioning Repairs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Air Conditioning Maintenance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cold and Freezer Rooms"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial HVAC Solutions"
+            }
+          }
+        ]
+      }
+    </script>
+
   </head>
 
   <body>
+
     <div id="root"></div>
+
   </body>
 </html>
